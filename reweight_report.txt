@@ -1,0 +1,33 @@
+Loading final_manifest...
+
+--- 1. EFFECTIVE NUM & RAW WEIGHTS (beta=0.9999) ---
+Class      | Count      | Effective Num   | Normalized Wt  
+Neutral    | 74874      | 9994.40         | 0.5726
+Happy      | 134415     | 9999.99         | 0.5723
+Sad        | 25459      | 9216.08         | 0.6210
+Surprise   | 14090      | 7556.30         | 0.7574
+Fear       | 6378       | 4715.63         | 1.2136
+Disgust    | 3803       | 3163.57         | 1.8090
+Anger      | 24882      | 9169.51         | 0.6241
+Contempt   | 3750       | 3127.24         | 1.8300
+
+Saving updated final_manifest...
+
+--- 2. EXPECTED PER-EPOCH SAMPLE COUNTS ---
+Class      | Raw Count  | Exp. Count   | Multiplier
+Neutral    | 74874      | 67285        | 0.90x
+Happy      | 134415     | 120723       | 0.90x
+Sad        | 25459      | 24811        | 0.97x
+Surprise   | 14090      | 16747        | 1.19x
+Fear       | 6378       | 12147        | 1.90x
+Disgust    | 3803       | 10797        | 2.84x
+Anger      | 24882      | 24371        | 0.98x
+Contempt   | 3750       | 10770        | 2.87x
+
+--- 3. CONFIRMATION OF RELATIVE OVERSAMPLING ---
+Happy absolute multiplier   : 0.90x
+Disgust absolute multiplier : 2.84x (Relative to Happy: 3.16x)
+Contempt absolute multiplier: 2.87x (Relative to Happy: 3.20x)
+PASS: Both relative multipliers are in the 2.5x-4x range.
+
+Done.

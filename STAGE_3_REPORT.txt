@@ -1,0 +1,44 @@
+=========================================================
+STAGE 3 EPOCH 17 VERIFICATION REPORT
+=========================================================
+
+The run cleanly executed Epoch 17, applied the Stage 3 config, and successfully halted exactly as requested via the --stop_after_epoch flag.
+
+--- LEARNING RATE CONFIRMATION ---
+The CosineAnnealingLR scheduler cleanly reinitialized using the Stage 3 parameters:
+- Backbone LR: 1.5e-5
+- Head LR: 1.5e-4
+
+--- PERFORMANCE COMPARISON ---
+
+[Epoch 16 - Stage 2 Final (Raw CE Loss)]
+Overall Acc : 41.30%
+Macro F1    : 0.3406
+Contempt    : 0.19%
+Disgust     : 6.19%
+Fear        : 23.59%
+Surprise    : 11.79%
+
+[Epoch 17 - Stage 3 First (Logit-Adjusted CE Loss)]
+Overall Acc : 38.60%
+Macro F1    : 0.3051
+Contempt    : 0.19%
+Disgust     : 1.79%   <-- Dropped
+Fear        : 17.59%  <-- Dropped
+Surprise    : 8.39%   <-- Dropped
+
+--- CRITICAL ANALYSIS ---
+The performance dropped across all minority classes. Why? 
+Because of a mathematical sign inversion in Menon's Logit Adjustment formulation between Inference vs Training.
+
+At INFERENCE time, the formula to unbias the network is:
+    prediction = argmax( logits - tau * log(p) )
+We subtract the negative log frequency to artificially BOOST the minority logits so they can win the argmax.
+
+But during TRAINING, if we boost the minority logits BEFORE applying Cross Entropy, we are artificially lowering the loss for minority samples. The network thinks it's already doing a great job on Contempt/Disgust, so the gradients vanish!
+
+To properly bake Logit Adjustment into the TRAINING loss (often called LA-Loss), the sign must be inverted:
+    adjusted_logits = logits + tau * log(p)
+This severely PENALIZES the minority logits before CE is calculated, creating a massive loss spike for minority classes and forcing the optimizer to push their weights much harder.
+
+I have strictly halted the process. When you review this, we should flip the sign to `+` in `combined_loss` before we resume the rest of Stage 3!

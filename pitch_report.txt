@@ -1,0 +1,29 @@
+Loading manifest...
+Total rows with null pitch: 82415 out of 414799
+
+--- 1. RAW JSON PARITY FOR NULL PITCH ---
+Out of 200 sampled JSONs:
+  'pitch' key absent: 200
+  'pitch' key explicitly null: 0
+  'pitch' present with valid value (Parser Bug): 0
+
+--- 2. CORRELATIONS OVER ENTIRE DATASET ---
+
+a. Correlation with Label (Human Label Distribution):
+Label | Null-Pitch Count | % of Null-Pitch | % of Total dataset
+   10 |            82415 |         100.00% |             19.87%
+
+b. Correlation with Yaw values:
+Null-Pitch rows Yaw -> min: -0.6100, max: 0.5900, mean: -0.1043, std: 0.1155
+Overall dataset Yaw -> min: -0.7500, max: 0.6400, mean: -0.0191, std: 0.1663
+Rows with |yaw| > 0.5 in Null-Pitch: 22 (0.03%)
+Rows with |yaw| > 0.5 in Overall: 1175 (0.28%)
+
+c. Image ID Pattern (Batch analysis):
+Min image ID: 9, Max image ID: 414798
+25th percentile ID: 103944
+75th percentile ID: 309804
+Overall 25th percentile ID: 103700
+Overall 75th percentile ID: 311098
+
+Done.

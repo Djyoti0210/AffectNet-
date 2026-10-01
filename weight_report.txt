@@ -1,0 +1,27 @@
+1. Loading tier_assigned_manifest...
+
+--- 1. CLASS SAMPLE WEIGHTS ---
+Class      | Count      | Weight    
+Neutral    | 74874      | 0.9940
+Happy      | 134415     | 0.9940
+Sad        | 25459      | 0.9940
+Surprise   | 14090      | 0.9940
+Fear       | 6378       | 0.9957
+Disgust    | 3803       | 1.0166
+Anger      | 24882      | 0.9940
+Contempt   | 3750       | 1.0179
+
+Saving to d:\AffectNet+\AffectNet+\human_annotated\train_set\final_manifest.csv...
+
+--- 5. EXPECTED PER-EPOCH SAMPLE COUNTS ---
+Class      | Raw Count  | Exp. Count   | Multiplier
+Neutral    | 74874      | 74825        | 1.00x
+Happy      | 134415     | 134327       | 1.00x
+Sad        | 25459      | 25442        | 1.00x
+Surprise   | 14090      | 14081        | 1.00x
+Fear       | 6378       | 6385         | 1.00x
+Disgust    | 3803       | 3887         | 1.02x
+Anger      | 24882      | 24866        | 1.00x
+Contempt   | 3750       | 3838         | 1.02x
+
+Done.

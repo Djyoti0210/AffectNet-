@@ -1,0 +1,19 @@
+Loading manifest...
+Exact count of rows with valence == -2.0: 94060
+Exact count of rows with arousal == -2.0: 94060
+
+--- Cross-tabulation against human_label ---
+
+Valence == -2.0 by human_label:
+  Label  9:  11645 rows (12.38%)
+  Label 10:  82415 rows (87.62%)
+
+Arousal == -2.0 by human_label:
+  Label  9:  11645 rows (12.38%)
+  Label 10:  82415 rows (87.62%)
+
+Combined (Valence or Arousal == -2.0) by human_label:
+  Label  9:  11645 rows (12.38%)
+  Label 10:  82415 rows (87.62%)
+
+Done.

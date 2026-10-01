@@ -1,0 +1,34 @@
+1. Loading master manifest and filtering...
+2. Saving to filtered_manifest.csv...
+
+3. ROW COUNT CONFIRMATION
+Resulting row count: 287651
+PASS: Row count is exactly 287,651
+
+4. CLASS BREAKDOWN CONFIRMATION
+Neutral   : Expected 74874, Actual 74874
+Happy     : Expected 134415, Actual 134415
+Sad       : Expected 25459, Actual 25459
+Surprise  : Expected 14090, Actual 14090
+Fear      : Expected 6378, Actual 6378
+Disgust   : Expected 3803, Actual 3803
+Anger     : Expected 24882, Actual 24882
+Contempt  : Expected 3750, Actual 3750
+PASS: All classes match perfectly.
+
+5. NULL CHECKS (pitch, valence, arousal)
+Null pitch count: 0
+Null valence count: 0
+Null arousal count: 0
+Valence == -2.0 count: 0
+Arousal == -2.0 count: 0
+PASS: 0% nulls and 0 rows with -2.0 sentinel values.
+
+6. SUBSET POPULATION CONFIRMATION
+Subset Easy       : Expected 194254, Actual 194254
+Subset Challenging: Expected 57427, Actual 57427
+Subset Difficult  : Expected 35970, Actual 35970
+Subset nulls count: 0
+PASS: Subset populated perfectly for all 287,651 rows with zero nulls.
+
+Done.

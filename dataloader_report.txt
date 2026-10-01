@@ -1,0 +1,18 @@
+Loading Dataset (using mock_images=True for instant sampler validation)...
+Iterating over one full epoch (287,651 samples)...
+
+Epoch completed in 173.06 seconds.
+
+--- ACTUAL OBSERVED CLASS DISTRIBUTION OVER 1 EPOCH ---
+Class      | Raw Count  | Observed Yield 
+---------------------------------------------
+Neutral    | 74874      | 67003          
+Happy      | 134415     | 120986         
+Sad        | 25459      | 24875          
+Surprise   | 14090      | 16609          
+Fear       | 6378       | 12058          
+Disgust    | 3803       | 10757          
+Anger      | 24882      | 24430          
+Contempt   | 3750       | 10933          
+
+Done.

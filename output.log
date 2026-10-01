@@ -1,0 +1,15 @@
+Loading datasets...
+Extracting features for epoch 28...
+Extracting features for avg_26_30...
+Running evaluations...
+
+RESULTS on val_clean (3466 images)
+Model                     | Acc     | BalAcc  | MacroF1
+-------------------------------------------------------
+Single ep28               | 49.39% | 49.27% | 0.4805
+Avg (26-30)               | 49.94% | 49.83% | 0.4894
+Avg + TTA                 | 50.46% | 50.34% | 0.4945
+Retrained Head            | 56.81% | 56.73% | 0.5706
+Retrained Head + TTA      | 56.81% | 56.73% | 0.5699
+
+Bootstrap CI (Head+TTA vs Avg+TTA): [4.99%, 7.76%]

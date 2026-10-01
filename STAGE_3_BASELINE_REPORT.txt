@@ -1,0 +1,21 @@
+=========================================================
+STAGE 3 EPOCH 17 BASELINE REPORT (RE-RUN)
+=========================================================
+
+--- PERFORMANCE COMPARISON ---
+
+[Epoch 16 - Stage 2 Final (Raw CE Loss)]
+Overall Acc : 40.10%
+Macro F1    : 0.3299
+Contempt    : 0.20%
+Disgust     : 5.80%
+Fear        : 21.20%
+Surprise    : 12.20%
+
+[Epoch 17 - Stage 3 First (Corrected Logit-Adjusted CE Loss)]
+Overall Acc : 43.25%
+Macro F1    : 0.3616
+Contempt    : 0.40%
+Disgust     : 8.40%
+Fear        : 25.80%
+Surprise    : 13.60%

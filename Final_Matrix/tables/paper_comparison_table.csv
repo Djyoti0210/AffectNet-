@@ -1,0 +1,3 @@
+Metric,Paper ResNet-50,Paper EfficientNet-B3,This Project (Raw),This Project (Calibrated)
+Overall Accuracy,52.06%,55.17%,42.84%,56.78%
+Macro F1,0.5021,0.5385,0.3673,0.5699

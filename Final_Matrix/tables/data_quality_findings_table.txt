@@ -1,0 +1,6 @@
+DATA QUALITY FINDINGS
+Total Validation Images: 4000
+Exact Duplicate Count: 425
+Near Duplicate Count: 307
+Total Removed for val_clean: 534
+Label Agreement Rate: 31.2%

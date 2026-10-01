@@ -1,0 +1,22 @@
+1. Loading tiered manifest...
+2. Saving to tier_assigned_manifest.csv...
+
+--- FINAL ROW COUNT PER TRAINING TIER ---
+gold           : 194254 rows
+standard       : 57427 rows
+soft_weighted  : 11867 rows
+high_risk      : 24103 rows
+
+--- PER-CLASS COUNTS WITHIN EACH TRAINING TIER ---
+Class      | gold       | standard   | soft_weighted   | high_risk  | % high_risk 
+--------------------------------------------------------------------------------
+Neutral    | 51422      | 14669      | 3191            | 5592       |   7.5%
+Happy      | 115934     | 11835      | 2713            | 3933       |   2.9%
+Sad        | 8171       | 11067      | 1885            | 4336       |  17.0%
+Surprise   | 4914       | 4646       | 1075            | 3455       |  24.5%
+Fear       | 1698       | 2270       | 588             | 1822       |  28.6%
+Disgust    | 987        | 1663       | 404             | 749        |  19.7%
+Anger      | 10651      | 8837       | 1769            | 3625       |  14.6%
+Contempt   | 477        | 2440       | 242             | 591        |  15.8%
+
+Done.

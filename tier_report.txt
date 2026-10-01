@@ -1,0 +1,55 @@
+1. Loading filtered manifest...
+
+--- DISTRIBUTION OF ABS(YAW) AND ABS(PITCH) ---
+abs(yaw) percentiles:
+count    287651.000000
+mean          0.123621
+std           0.114444
+min           0.000000
+50%           0.090000
+75%           0.190000
+90%           0.300000
+95%           0.360000
+99%           0.460000
+max           0.750000
+Name: yaw, dtype: float64
+
+abs(pitch) percentiles:
+count    287651.000000
+mean          0.123391
+std           0.083064
+min           0.000000
+50%           0.110000
+75%           0.180000
+90%           0.240000
+95%           0.270000
+99%           0.350000
+max           0.600000
+Name: pitch, dtype: float64
+
+Applying threshold > 0.5 for pose_degraded...
+
+Saving to d:\AffectNet+\AffectNet+\human_annotated\train_set\tiered_manifest.csv...
+
+--- CROSS-TABULATION ---
+quality_flag      clean               ... pose_degraded     All
+gap_bin      below -0.5 -0.3 to -0.5  ...     0 to -0.1        
+subset                                ...                      
+Challenging        1035         8963  ...           124   57427
+Difficult          7895        16112  ...            11   35970
+Easy                  0            0  ...           565  194254
+All                8930        25075  ...           700  287651
+
+[4 rows x 9 columns]
+
+--- TOP PREDICTED CLASS CONFUSION (WHEN WRONG) ---
+Human: Neutral    -> Most confused with: Happy: 7589, Anger: 4097, Sad: 3816
+Human: Happy      -> Most confused with: Neutral: 8862, Contempt: 3439, Sad: 1563
+Human: Sad        -> Most confused with: Neutral: 8308, Happy: 3169, Anger: 2483
+Human: Surprise   -> Most confused with: Neutral: 4052, Happy: 2774, Fear: 807
+Human: Fear       -> Most confused with: Surprise: 1415, Neutral: 1111, Happy: 872
+Human: Disgust    -> Most confused with: Anger: 816, Happy: 778, Neutral: 552
+Human: Anger      -> Most confused with: Neutral: 7137, Happy: 2284, Sad: 1488
+Human: Contempt   -> Most confused with: Happy: 1786, Neutral: 1100, Anger: 203
+
+Done.

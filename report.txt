@@ -1,0 +1,157 @@
+Loading manifest...
+
+--- 1. ROW COUNT ---
+Expected rows: 414799
+Actual rows: 414799
+Result: PASS
+
+--- 2. IMAGE-JSON PARITY ---
+a. Images in folder: 414799
+b. Missing files: 0
+c. Duplicate image_ids: 0
+   Duplicate image_paths: 0
+Result: PASS
+
+--- 3. LABEL DISTRIBUTION CHECK ---
+Label      | Expected   | Actual     | Diff %    
+0          | 75374      | 74874      | 0.66%
+1          | 134915     | 134415     | 0.37%
+2          | 25959      | 25459      | 1.93%
+3          | 14590      | 14090      | 3.43%
+4          | 6878       | 6378       | 7.27%
+5          | 4303       | 3803       | 11.62%
+6          | 25382      | 24882      | 1.97%
+7          | 4250       | 3750       | 11.76%
+8          | 33588      | 33088      | 1.49%
+9          | 12145      | 11645      | 4.12%
+10         | 82915      | 82415      | 0.60%
+Result: FAIL
+
+--- 4. SOFT-LABEL SANITY ---
+a. Rows with 0-7 human_label but missing soft-labels: 0
+b. Rows not summing to 1.0 (±0.02): 287643
+   Sum min: 0.7826, max: 3.2510, mean: 1.8185
+c. Non-expression rows (8,9,10) total: 127148
+   Rows with entirely null soft_labels: 127148
+   Rows where soft_labels sum to 0: 127148
+   Rows with populated soft_labels (sum>0): -127148
+d. Soft-label range (real expr): min=0.0570, max=0.7250, mean=0.2273
+Result: PASS
+
+--- 5. SUBSET DISTRIBUTION CHECK ---
+Real expression (0-7) subset distribution:
+Subset          | Expected   | Actual     | Diff      
+Easy            | 194254     | 194254     | 0         
+Challenging     | 57427      | 57427      | 0         
+Difficult       | 35970      | 35970      | 0         
+Non-expression subset exactly 'None': 0, actual null: 127148
+Result: PASS
+
+--- 6. METADATA COMPLETENESS ---
+age                 : 0.00% null
+valence             : 0.00% null
+arousal             : 0.00% null
+gender_male_prob    : 0.00% null
+gender_female_prob  : 0.00% null
+race_asian          : 0.00% null
+race_indian         : 0.00% null
+race_black          : 0.00% null
+race_white          : 0.00% null
+race_mideast        : 0.00% null
+race_hispanic       : 0.00% null
+yaw                 : 0.00% null
+pitch               : 19.87% null
+roll                : 0.00% null
+Result: FAIL
+
+--- 7. RANGE SANITY CHECKS ---
+Valence range: [-2.0000, 0.9991]
+Arousal range: [-2.0000, 0.9969]
+Yaw range:   [-0.7500, 0.6400]
+Pitch range: [-0.6000, 0.5300]
+Roll range:  [-0.4700, 0.5400]
+Age range: [11.00, 70.00]
+Rows where gender prob sum != 1.0: 0
+Rows where race prob sum != 1.0: 91
+Result: FAIL
+
+--- 8. LANDMARKS CHECK ---
+b. Rows with null/empty landmarks: 0
+a. Valid length (136) in 100 sample: 100
+Result: PASS
+
+--- 9. SPOT-CHECK AGAINST RAW JSON ---
+
+Image ID: 326409
+JSON label: 4 | CSV label: 4
+
+Image ID: 233190
+JSON label: 0 | CSV label: 0
+
+Image ID: 29931
+JSON label: 8 | CSV label: 8
+
+Image ID: 202004
+JSON label: 1 | CSV label: 1
+
+Image ID: 332193
+JSON label: 1 | CSV label: 1
+
+Image ID: 68951
+JSON label: 0 | CSV label: 0
+
+Image ID: 311822
+JSON label: 3 | CSV label: 3
+
+Image ID: 168459
+JSON label: 1 | CSV label: 1
+
+Image ID: 192388
+JSON label: 1 | CSV label: 1
+
+Image ID: 201884
+JSON label: 1 | CSV label: 1
+
+Image ID: 68949
+JSON label: 8 | CSV label: 8
+
+Image ID: 101486
+JSON label: 10 | CSV label: 10
+
+Image ID: 137328
+JSON label: 10 | CSV label: 10
+
+Image ID: 17044
+JSON label: 1 | CSV label: 1
+
+Image ID: 393052
+JSON label: 10 | CSV label: 10
+
+Image ID: 9662
+JSON label: 1 | CSV label: 1
+
+Image ID: 69403
+JSON label: 6 | CSV label: 6
+
+Image ID: 12334
+JSON label: 0 | CSV label: 0
+
+Image ID: 210121
+JSON label: 8 | CSV label: 8
+
+Image ID: 243850
+JSON label: 2 | CSV label: 2
+Result: PASS
+
+--- 10. FINAL REPORT ---
+Check Name                     | Pass/Fail  | Notes
+------------------------------------------------------------
+1. Row Count                   | PASS       |
+2. Image-JSON Parity           | PASS       |
+3. Label Distribution          | FAIL       |
+4. Soft-Label Sanity           | PASS       |
+5. Subset Distribution         | PASS       |
+6. Metadata Completeness       | FAIL       |
+7. Range Sanity Checks         | FAIL       |
+8. Landmarks Check             | PASS       |
+9. Spot-Check                  | PASS       |

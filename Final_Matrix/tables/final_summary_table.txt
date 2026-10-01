@@ -1,0 +1,6 @@
+FINAL SUMMARY TABLE ON VAL_CLEAN
+--------------------------------------------------------------------------------
+Single ep28               | Acc: 0.4896 | BalAcc: 0.4884 | MacF1: 0.4752
+Avg (26-30)               | Acc: 0.5029 | BalAcc: 0.5017 | MacF1: 0.4919
+Avg + TTA                 | Acc: 0.5006 | BalAcc: 0.4995 | MacF1: 0.4900
+Retrained Head + TTA      | Acc: 0.5678 | BalAcc: 0.5669 | MacF1: 0.5699
